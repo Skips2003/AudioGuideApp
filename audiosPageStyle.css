@@ -1,0 +1,100 @@
+.displayRow{
+    width: 100%;
+    display: flex;
+}
+
+.displayColumn{
+    background-color: powderblue;
+    float: left;
+    width: 33%;
+    max-width: 33%;
+}
+
+.displayCell{
+    background-color: rgb(31, 16, 243);
+    height: 200px;
+    max-width: 200px;
+    border-radius: 20%;
+}
+
+.displayCellImage{
+    background-color: rgb(31, 16, 243);
+    height: 75px;
+    max-width: 200px;
+}
+.displayCellDescription{
+    background-color: rgb(243, 171, 16);
+    height: 125px;
+    max-width: 200px;
+}
+
+/* Header CSS */
+.top-left {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    opacity: 0;
+    animation: fadeIn 3s forwards;
+    animation-delay: 5s;
+}
+.top-right {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    opacity: 0;
+    animation: fadeIn 3s forwards;
+    animation-delay: 5s;
+}
+button {
+    background-color: #0A192F;
+    border: 2px solid #FFC857;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 12px;
+}
+.animated-text {
+    font-size: 100px;
+    font-weight: bold;
+    animation: slideUp 5s forwards;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(238, 235, 235, 0.3);
+}
+.fade-in-text {
+    font-size: 24px;
+    font-weight: normal;
+    opacity: 0;
+    animation: fadeIn 3s forwards;
+    animation-delay: 5s;
+    color: #ffffff;
+    border-color: #000000;
+    border-width: 4px;
+    margin-top: 20px;
+}
+input[type="text"] {
+    padding: 4px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+@keyframes slideUp {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-120px);
+    }
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
