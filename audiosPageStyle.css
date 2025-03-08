@@ -33,6 +33,21 @@
 }
 
 /* Header CSS */
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #0A192F;
+    background-image: url('Dundee.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    position: relative;
+}
+
 .top-left {
     position: absolute;
     top: 20px;
