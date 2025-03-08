@@ -1,68 +1,94 @@
-.displayRow{
+.displayRow {
     width: 100%;
     display: flex;
-    padding-left: 60px;
-    padding-right: 60px;
-}
-
-.displayColumn{
+    justify-content: center; /* Ensures columns are centered */
     background-color: powderblue;
-    float: left;
-    width: 33%;
-    max-width: 33%;
-    padding: 20px;
+    padding: 0; /* Remove any extra padding */
+    margin: 0; /* Remove margin */
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
-.displayCell{
-    background-color: rgb(31, 16, 243);
-    height: 200px;
-    max-width: 200px;
+.displayColumn {
+    
+    flex: 1;
+    height: 300px;
+    display: flex; /* Make column a flex container */
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
     border-radius: 20%;
+
 }
 
-.displayCellImage{
-    height: 75px;
-    max-width: 200px;
+.displayCell {
+    background-color: rgb(31, 16, 243);
+    max-width: 300px;
+    align-self: center;
+    border-radius: 20%;
+    height: 100%;
+    display: flex; /* Make it a flex container */
+    flex-direction: column; /* Stack children vertically */
+    overflow: hidden; /* Ensures no extra spacing issues */
+}
+.displayCellImage {
+    height: 50%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    background-image: var(--bg-image); /* Use CSS variable */
+    padding: 0;
+    margin:0;
 }
 
 .displayCellDescription{
     background-color: rgb(243, 171, 16);
-    height: 125px;
-    max-width: 200px;
+    height: 50%;
+    width: 100%;
+    max-width: 300px;
     text-align: center;
 }
 
 /* Header CSS */
-header{
+
+/* Header styles */
+header {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    margin: 0;
     background-color: #0A192F;
     background-image: url('Dundee.jpg'); 
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat; 
-    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed; /* Fixes it to the top */
+    top: 0;
+    left: 0;
+    width: 100vw; /* Full width */
+    height: 80px;
+    padding-bottom:7px;
 }
+
+
 
 .top-left {
     position: absolute;
     top: 20px;
     left: 20px;
     opacity: 0;
-    animation: fadeIn 3s forwards;
-    animation-delay: 5s;
+    animation: fadeIn 1.5s forwards;
+    animation-delay: 1.5s;
 }
 .top-right {
     position: absolute;
     top: 20px;
     right: 20px;
     opacity: 0;
-    animation: fadeIn 3s forwards;
-    animation-delay: 5s;
+    animation: fadeIn 1.5s forwards;
+    animation-delay: 1.5s;
 }
 button {
     background-color: #0A192F;
@@ -80,7 +106,7 @@ button {
 .animated-text {
     font-size: 100px;
     font-weight: bold;
-    animation: slideUp 5s forwards;
+    animation: slideUp 1.5s forwards;
     color: #ffffff;
     text-shadow: 2px 2px 4px rgba(238, 235, 235, 0.3);
 }
@@ -88,12 +114,12 @@ button {
     font-size: 24px;
     font-weight: normal;
     opacity: 0;
-    animation: fadeIn 3s forwards;
-    animation-delay: 5s;
+    animation: fadeIn 1.5s forwards;
+    animation-delay: 1.5s;
     color: #ffffff;
     border-color: #000000;
     border-width: 4px;
-    margin-top: 20px;
+    margin-top: 0px;
 }
 input[type="text"] {
     padding: 4px;
@@ -106,7 +132,7 @@ input[type="text"] {
         transform: translateY(0);
     }
     100% {
-        transform: translateY(-120px);
+        transform: translateY(1px);
     }
 }
 @keyframes fadeIn {
@@ -116,4 +142,8 @@ input[type="text"] {
     100% {
         opacity: 1;
     }
+}
+
+main{
+    padding-top: 80px;
 }
