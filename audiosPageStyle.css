@@ -1,6 +1,8 @@
 .displayRow{
     width: 100%;
     display: flex;
+    padding-left: 60px;
+    padding-right: 60px;
 }
 
 .displayColumn{
@@ -8,6 +10,7 @@
     float: left;
     width: 33%;
     max-width: 33%;
+    padding: 20px;
 }
 
 .displayCell{
@@ -18,14 +21,15 @@
 }
 
 .displayCellImage{
-    background-color: rgb(31, 16, 243);
     height: 75px;
     max-width: 200px;
 }
+
 .displayCellDescription{
     background-color: rgb(243, 171, 16);
     height: 125px;
     max-width: 200px;
+    text-align: center;
 }
 
 /* Header CSS */
