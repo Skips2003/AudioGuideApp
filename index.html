@@ -1,8 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Audio Guide</title>
-  </head>
-  <body>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Animation</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .animated-text {
+            font-size: 100px;
+            font-weight: bold;
+            animation: slideUp 5s forwards;
+            position: absolute;
+        }
+        @keyframes slideUp {
+            0% {
+                top: 50%;
+                transform: translateY(0);
+            }
+            100% {
+                top: 0;
+                transform: translateY(-100%);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="animated-text">Travel Tunes</div>
+</body>
 </html>
